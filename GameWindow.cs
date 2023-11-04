@@ -24,6 +24,7 @@ namespace VeggieSandwich
             GameUpdate.Tick += KeyHandler.InvokeKeys;
 
             Plate.AddPictureBox(plate);
+            Plate.SetBoundaries(Width, Height);
             gameObjects.Add(Plate);
         }
 
