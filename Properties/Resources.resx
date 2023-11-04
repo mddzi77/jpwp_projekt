@@ -118,7 +118,307 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="acorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\acorn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="amanita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\amanita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\apple .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="asparagus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\asparagus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="avocado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\avocado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bananas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\bananas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="becone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\becone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\beer .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\beet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blueberry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\blueberry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bobs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\bobs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\bone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="borth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\borth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bread" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\bread.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bread2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\bread2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bread3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\bread3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="broccoli" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\broccoli.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="butter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\butter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cabbage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cabbage .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cake2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cake2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cake3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cake3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="candy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\candy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="candy2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\candy2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carrot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\carrot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="celery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\celery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Champignon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\Champignon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cheese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cheese.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cheese2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cheese2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cheesecake" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cheesecake.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cherry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cherry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chiken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\chiken .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chocolate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\chocolate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cocount" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cocount.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coffee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\coffee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cookies" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cookies.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="corn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\corn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="croissant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\croissant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cupcakes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\cupcakes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\dill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="donuts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\donuts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eggplant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\eggplant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eggs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\eggs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\fish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fish2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\fish2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fish_skeleton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\fish skeleton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fish_steak" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\fish steak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="granat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\granat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grapes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\grapes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grapes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\grapes1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ham" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\ham.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="honey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\honey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\ice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ice_cream" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\ice cream.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jelly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\jelly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kiwi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\kiwi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="leg_chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\leg chicken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lemon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\lemon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mandrake_root" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\mandrake root.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="meat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\meat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\melone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="milk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\milk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\mint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mushroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\mushroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\nut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="octopus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\octopus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\oil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\onion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pasties" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\pasties.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="peach" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\peach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\pear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="peas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\peas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\pie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pineapple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\pineapple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\plate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="porridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\porridge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="potato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\potato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pumpiking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\pumpiking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\radish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radish2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\radish2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_pepper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\red pepper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\salat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sausage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\sausage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="schnitzel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\schnitzel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sea_buckthorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\sea buckthorn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\shell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shrimp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\shrimp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spice1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\spice1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spice2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\spice2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="squid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\squid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="straberry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\straberry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sunflower_seeds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\sunflower seeds.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\tea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\tomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\Untitled-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\vine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="water" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\water.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="watermelon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\watermelon .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wheat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\wheat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_pepper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\FoodPack\yellow pepper .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -11,8 +11,6 @@ namespace VeggieSandwich.Scripts
     {
         public int FallSpeed = 4;
 
-        public enum Type { Broccoli, Corn }
-
 
         private PictureBox _pictureBoxComponent;
 
