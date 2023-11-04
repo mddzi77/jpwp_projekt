@@ -1,4 +1,7 @@
-﻿namespace VeggieSandwich
+﻿using VeggieSandwich.Scripts;
+using VeggieSandwich.Scripts.Core;
+
+namespace VeggieSandwich
 {
     partial class GameWindow
     {
@@ -29,27 +32,35 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameWindow));
             GameUpdate = new System.Windows.Forms.Timer(components);
-            Plate = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)Plate).BeginInit();
+            label1 = new Label();
+            plate = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)plate).BeginInit();
             SuspendLayout();
             // 
             // GameUpdate
             // 
-            GameUpdate.Interval = 20;
-            GameUpdate.Tick += Update;
+            GameUpdate.Enabled = true;
+            GameUpdate.Interval = 1;
             // 
-            // Plate
+            // label1
             // 
-            Plate.BackColor = Color.Transparent;
-            Plate.Image = (Image)resources.GetObject("Plate.Image");
-            Plate.Location = new Point(396, 819);
-            Plate.Name = "Plate";
-            Plate.Size = new Size(138, 169);
-            Plate.SizeMode = PictureBoxSizeMode.StretchImage;
-            Plate.TabIndex = 0;
-            Plate.TabStop = false;
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 1;
+            label1.Text = "label1";
+            // 
+            // plate
+            // 
+            plate.Image = Properties.Resources.plate;
+            plate.Location = new Point(410, 839);
+            plate.Name = "plate";
+            plate.Size = new Size(150, 149);
+            plate.SizeMode = PictureBoxSizeMode.StretchImage;
+            plate.TabIndex = 2;
+            plate.TabStop = false;
             // 
             // GameWindow
             // 
@@ -57,17 +68,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(1000, 1000);
-            Controls.Add(Plate);
+            Controls.Add(plate);
+            Controls.Add(label1);
             Name = "GameWindow";
             Text = "VeggieSandwich";
-            KeyPress += OnKeyPress;
-            ((System.ComponentModel.ISupportInitialize)Plate).EndInit();
+            ((System.ComponentModel.ISupportInitialize)plate).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private System.Windows.Forms.Timer GameUpdate;
-        private PictureBox Plate;
+        private Label label1;
+        private PictureBox plate;
     }
 }
