@@ -7,22 +7,43 @@ using VeggieSandwich.Scripts.Core;
 
 namespace VeggieSandwich.Scripts
 {
-    public class Vegetable : IGameObject
+    public class Vegetable : PictureBox, IGameObject
     {
-        public int FallSpeed = 4;
+        public int FallSpeed = 3;
+        public BoostType Type;
+        public int Strength;
 
+        public event Action<Vegetable> OnReturnToPool;
 
-        private PictureBox _pictureBoxComponent;
+        private Random _random = new();
 
         public void Update(object sender, EventArgs e)
         {
-            var location = _pictureBoxComponent.Location;
-            location.Y -= FallSpeed;
+            if (!Enabled) return;
+            var location = Location;
+            location.Y += FallSpeed;
+            Location = location;
+
+            if (location.Y >= Parent.Height)
+            {
+                OnReturnToPool?.Invoke(this);
+                Enabled = false;
+            }
         }
 
-        public void SetType(Type type)
+        public void Initialize()
         {
+            Enabled = true;
+            var id = _random.Next(0, VegetablesConfigs.Configs.Count);
+            var config = VegetablesConfigs.Configs[id];
+            Image = config.Image;
+            Type = config.Type;
+            Strength = config.Strength;
 
+            Name = $"vegetable{id}";
+            Size = new Size(105, 105);
+            SizeMode = PictureBoxSizeMode.StretchImage;
+            TabStop = true;
         }
     }
 }

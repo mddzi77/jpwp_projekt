@@ -9,23 +9,25 @@ namespace VeggieSandwich.Scripts
 {
     public static class VegetablesConfigs
     {
-        public static Dictionary<Image, Boost> Configs = new Dictionary<Image, Boost>()
+        public static List<Boost> Configs = new List<Boost>()
         {
-            { Resources.corn, new Boost(BoostType.Memory, 2) },
-            { Resources.avocado, new Boost(BoostType.Memory, 5) },
-            { Resources.broccoli, new Boost(BoostType.Eyesight, 3) },
-            { Resources.cucumber, new Boost(BoostType.Muscles, 4) },
-            { Resources.onion, new Boost(BoostType.Eyesight, 2) }
+            new Boost( Resources.corn, BoostType.Memory, 2),
+            new Boost(Resources.avocado, BoostType.Memory, 5),
+            new Boost(Resources.broccoli, BoostType.Eyesight, 3),
+            new Boost(Resources.cucumber, BoostType.Muscles, 4),
+            new Boost(Resources.onion, BoostType.Eyesight, 2)
         };
     }
 
     public struct Boost
     {
-        public Boost(BoostType type, int strength)
+        public Boost(Image image, BoostType type, int strength)
         {
+            Image = image;
             Type = type;
             Strength = strength;
         }
+        public Image Image;
         public BoostType Type;
         public int Strength;
     }
