@@ -46,9 +46,12 @@ namespace VeggieSandwich.Scripts
             location.X += (int)_movement.X;
             location.Y += (int)_movement.Y;
             _pictureBoxComponent.Location = location;
-            DisposeSpeed();
+            Slowdown();
         }
 
+        /// <summary>
+        /// Add empty picture box
+        /// </summary>
         public void AddPictureBox()
         {
             _pictureBoxComponent = new PictureBox();
@@ -56,6 +59,10 @@ namespace VeggieSandwich.Scripts
             _size.Height = _pictureBoxComponent.Height;
         }
 
+        /// <summary>
+        /// Add given picture box
+        /// </summary>
+        /// <param name="pictureBox"></param>
         public void AddPictureBox(PictureBox pictureBox)
         {
             _pictureBoxComponent = pictureBox;
@@ -63,23 +70,37 @@ namespace VeggieSandwich.Scripts
             _size.Height = _pictureBoxComponent.Height;
         }
 
+        /// <summary>
+        /// Set how much object can move
+        /// </summary>
+        /// <param name="horizontal"></param>
+        /// <param name="vertical"></param>
         public void SetBoundaries(int horizontal, int vertical)
         {
             _boundaries.X = horizontal;
             _boundaries.Y = vertical;
         }
 
+        /// <summary>
+        /// Add left movement
+        /// </summary>
         private void LeftMove()
         {
             _movement.X -= SpeedX;
         }
 
+        /// <summary>
+        /// Add right movement
+        /// </summary>
         private void RightMove()
         {
             _movement.X += SpeedX;
         }
 
-        private void DisposeSpeed()
+        /// <summary>
+        /// Smoothly slow down object
+        /// </summary>
+        private void Slowdown()
         {
             _movement.X *= Drag;
             if (MathF.Abs(_movement.X) < 1) _movement.X = 0;
@@ -87,6 +108,10 @@ namespace VeggieSandwich.Scripts
             if (MathF.Abs(_movement.Y) < 1) _movement.Y = 0;
         }
 
+        /// <summary>
+        /// Check if object can move further, if reset movement vector
+        /// </summary>
+        /// <param name="location">Current location</param>
         private void CheckBoundaries(Point location)
         {
             var left = location.X + _movement.X;

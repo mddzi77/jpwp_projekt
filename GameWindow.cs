@@ -24,7 +24,10 @@ namespace VeggieSandwich
             _vegetableSpawner.StartSpawnning();
         }
 
-        public void GameObjectsInitialize()
+        /// <summary>
+        /// Initialize vegetables pool and moveable plate object
+        /// </summary>
+        private void GameObjectsInitialize()
         {
             // Initialize arrows keys handler
             KeyDown += KeyHandler.KeyDown;
@@ -40,16 +43,22 @@ namespace VeggieSandwich
             {
                 var vegetable = new Vegetable();
                 vegetable.Enabled = false;
+
                 ((System.ComponentModel.ISupportInitialize)vegetable).BeginInit();
+
                 Controls.Add(vegetable);
                 _vegetablesPool.Add(vegetable);
                 _gameObjects.Add(vegetable);
+
                 ((System.ComponentModel.ISupportInitialize)vegetable).EndInit();
             }
             ResumeLayout(false);
             PerformLayout();
         }
 
+        /// <summary>
+        /// Subscribe all initialized game objects to game update event
+        /// </summary>
         private void SubscribeToGameUpdate()
         {
             foreach (var gameObject in _gameObjects)

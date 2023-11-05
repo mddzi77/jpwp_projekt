@@ -31,6 +31,9 @@ namespace VeggieSandwich.Scripts
             }
         }
 
+        /// <summary>
+        /// Set object image and vegetable params
+        /// </summary>
         public void Initialize()
         {
             Enabled = true;

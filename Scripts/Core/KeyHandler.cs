@@ -22,6 +22,8 @@ namespace VeggieSandwich.Scripts.Core
         /// <summary>
         /// Invoke key press events after flag is up
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public static void InvokeKeys(object sender, EventArgs e)
         {
             if (_leftArrow) OnLeftArrow?.Invoke();
@@ -33,6 +35,8 @@ namespace VeggieSandwich.Scripts.Core
         /// <summary>
         /// Put flag up when key is pressed down
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public static void KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -49,12 +53,15 @@ namespace VeggieSandwich.Scripts.Core
                 case Keys.Down:
                     _downArrow = true;
                     break;
+                default: return;
             }
         }
 
         /// <summary>
         /// Put flag down when key is released
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public static void KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -71,6 +78,7 @@ namespace VeggieSandwich.Scripts.Core
                 case Keys.Down:
                     _downArrow = false;
                     break;
+                default: return;
             }
         }
 

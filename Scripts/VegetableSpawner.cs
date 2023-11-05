@@ -51,6 +51,10 @@ namespace VeggieSandwich.Scripts
 
         public void StopSpawnning() => _isSpawning = false;
 
+        /// <summary>
+        /// Get random vegetable from pool and spawn it
+        /// </summary>
+        /// <exception cref="IndexOutOfRangeException"></exception>
         private void SpawnVegetable()
         {
             if (_vegetables.Count == 0) throw new IndexOutOfRangeException("Vegetables pool is empty");
@@ -63,6 +67,10 @@ namespace VeggieSandwich.Scripts
             _vegetablesInUse.Add(vegetable);
         }
 
+        /// <summary>
+        /// Set position in between boundaries for given vegetable
+        /// </summary>
+        /// <param name="vegetable"></param>
         private void SetSpawnPosition(Vegetable vegetable)
         {
             var xPosition = _random.Next((int)_spawnBoundaries.X, (int)_spawnBoundaries.Y);
@@ -70,6 +78,10 @@ namespace VeggieSandwich.Scripts
             vegetable.Location = location;
         }
 
+        /// <summary>
+        /// Remove vegetable from in use list and return it to pool
+        /// </summary>
+        /// <param name="vegetable"></param>
         private void ReturnToPool(Vegetable vegetable)
         {
             _vegetablesInUse.Remove(vegetable);
