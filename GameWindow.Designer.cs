@@ -41,9 +41,8 @@ namespace VeggieSandwich
             panel5 = new Panel();
             panel6 = new Panel();
             panel7 = new Panel();
-            panel8 = new Panel();
             pictureBox1 = new PictureBox();
-            panel7.SuspendLayout();
+            panel8 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -81,14 +80,16 @@ namespace VeggieSandwich
             // 
             // panel3
             // 
+            panel3.BackColor = Color.Transparent;
             panel3.Location = new Point(751, 384);
             panel3.Name = "panel3";
-            panel3.Size = new Size(164, 99);
+            panel3.Size = new Size(163, 99);
             panel3.TabIndex = 5;
             panel3.Tag = "collider";
             // 
             // panel4
             // 
+            panel4.BackColor = Color.Transparent;
             panel4.Location = new Point(610, 417);
             panel4.Name = "panel4";
             panel4.Size = new Size(144, 65);
@@ -97,36 +98,30 @@ namespace VeggieSandwich
             // 
             // panel5
             // 
+            panel5.BackColor = Color.Transparent;
             panel5.Location = new Point(42, 284);
             panel5.Name = "panel5";
-            panel5.Size = new Size(877, 65);
+            panel5.Size = new Size(872, 65);
             panel5.TabIndex = 7;
             panel5.Tag = "collider";
             // 
             // panel6
             // 
-            panel6.Location = new Point(911, 344);
+            panel6.BackColor = Color.Transparent;
+            panel6.Location = new Point(910, 344);
             panel6.Name = "panel6";
-            panel6.Size = new Size(47, 342);
+            panel6.Size = new Size(48, 342);
             panel6.TabIndex = 8;
             panel6.Tag = "collider";
             // 
             // panel7
             // 
-            panel7.Controls.Add(panel8);
+            panel7.BackColor = Color.Transparent;
             panel7.Location = new Point(3, 344);
             panel7.Name = "panel7";
             panel7.Size = new Size(47, 342);
             panel7.TabIndex = 9;
             panel7.Tag = "collider";
-            // 
-            // panel8
-            // 
-            panel8.Location = new Point(39, 323);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(877, 42);
-            panel8.TabIndex = 8;
-            panel8.Tag = "collider";
             // 
             // pictureBox1
             // 
@@ -137,6 +132,15 @@ namespace VeggieSandwich
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
+            // panel8
+            // 
+            panel8.BackColor = Color.Transparent;
+            panel8.Location = new Point(42, 667);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(872, 42);
+            panel8.TabIndex = 8;
+            panel8.Tag = "collider";
+            // 
             // GameWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -144,6 +148,7 @@ namespace VeggieSandwich
             BackColor = Color.Bisque;
             BackgroundImage = Properties.Resources.kitchen;
             ClientSize = new Size(954, 721);
+            Controls.Add(panel8);
             Controls.Add(pictureBox1);
             Controls.Add(panel7);
             Controls.Add(panel6);
@@ -156,7 +161,6 @@ namespace VeggieSandwich
             Name = "GameWindow";
             Text = "VeggieSandwich";
             Load += GameWindow_Load;
-            panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -173,7 +177,7 @@ namespace VeggieSandwich
         private Panel panel5;
         private Panel panel6;
         private Panel panel7;
-        private Panel panel8;
         private PictureBox pictureBox1;
+        private Panel panel8;
     }
 }

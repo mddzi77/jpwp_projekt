@@ -16,20 +16,14 @@ namespace VeggieSandwich.Scripts
         public PictureBox Picture => _pictureBoxComponent;
 
         private Vector2 _movement = Vector2.Zero;
-        private Vector2 _boundaries = Vector2.Zero;
         private PictureBox _pictureBoxComponent;
         private Size _size;
-
-        private struct Size
-        {
-            public Size(int width, int height)
-            {
-                Width = width;
-                Height = height;
-            }
-            public int Width;
-            public int Height;
-        }
+        private Point _location;
+        private int Left => _pictureBoxComponent.Left;
+        private int Right => _pictureBoxComponent.Right;
+        private int Top => _pictureBoxComponent.Top;
+        private int Bottom => _pictureBoxComponent.Bottom;
+        private Direction _direction = new(Directions.None, Directions.None);
 
         public Moveable()
         {
@@ -43,12 +37,13 @@ namespace VeggieSandwich.Scripts
         public void Update(object sender, EventArgs e)
         {
             if (_movement.Equals(Vector2.Zero)) return;
-            var location = _pictureBoxComponent.Location;
-            CanMove(location);
-            location.X += (int)_movement.X;
-            location.Y += (int)_movement.Y;
-            _pictureBoxComponent.Location = location;
+            SetDirection();
+            CanMove();
+            _location.X += (int)_movement.X;
+            _location.Y += (int)_movement.Y;
+            _pictureBoxComponent.Location = _location;
             Slowdown();
+            Console.WriteLine(_location.ToString());
         }
 
         public void AddPictureBox()
@@ -56,6 +51,7 @@ namespace VeggieSandwich.Scripts
             _pictureBoxComponent = new PictureBox();
             _size.Width = _pictureBoxComponent.Width;
             _size.Height = _pictureBoxComponent.Height;
+            _location = _pictureBoxComponent.Location;
         }
 
         public void AddPictureBox(PictureBox pictureBox)
@@ -63,6 +59,7 @@ namespace VeggieSandwich.Scripts
             _pictureBoxComponent = pictureBox;
             _size.Width = _pictureBoxComponent.Width;
             _size.Height = _pictureBoxComponent.Height;
+            _location = _pictureBoxComponent.Location;
         }
 
         private void LeftMove()
@@ -93,45 +90,121 @@ namespace VeggieSandwich.Scripts
             if (MathF.Abs(_movement.Y) < 1) _movement.Y = 0;
         }
 
-        private void CanMove(Point location)
+        private void CanMove()
         {
-            var left = location.X + (int)_movement.X;
-            var right = location.X + (int)_movement.X + _size.Width;
-            var top = location.Y + (int)_movement.Y;
-            var bottom = location.Y + (int)_movement.Y + _size.Height;
+            CheckHorizontally();
+            CheckVertically();
+        }
 
-            for (int i = left; i <= right; i++)
+        private void CheckHorizontally()
+        {
+            int newEdge;
+
+            if (_movement.X > 0)
             {
-                var positionTop = new Point(i, top);
-                var positionBottom = new Point(i, bottom);
+                newEdge = Right + (int)_movement.X;
+            }
+            else if (_movement.X < 0)
+            {
+                newEdge = Left + (int)_movement.X;
+            }
+            else return;
 
-                var control = Picture.Parent.GetChildAtPoint(positionTop);
+            for (int i = Top; i < Bottom; i++)
+            {
+                var newPoint= new Point(newEdge, i);
+                var control = Picture.Parent.GetChildAtPoint(newPoint);
                 if (IsCollider(control))
                 {
-                    var maxPosition = control.Location.Y + control.Height;
-                    _movement.Y = maxPosition - location.Y;
-                }
-
-                control = Picture.Parent.GetChildAtPoint(positionBottom);
-                if (IsCollider(control))
-                {
-                    var maxPosition = control.Location.Y;
-                    _movement.Y = bottom - maxPosition ;
+                    int maxMovement;
+                    if (_movement.X > 0) maxMovement = control.Left - Right;
+                    else maxMovement = control.Right - Left;
+                    _movement.X = maxMovement;
+                    return;
                 }
             }
+        }
 
+        private void CheckVertically()
+        {
+            int newEdge;
 
-
-            for (int i = bottom; i <= top; i++)
+            if (_movement.Y > 0)
             {
-                var positionLeft = new Point(left, i);
-                var positionRight = new Point(right, i);
+                newEdge = Bottom + (int)_movement.Y;
+            }
+            else if (_movement.Y < 0)
+            {
+                newEdge = Top + (int)_movement.Y;
+            }
+            else return;
+
+            for (int i = Left; i < Right; i++)
+            {
+                var newPoint = new Point(i, newEdge);
+                var control = _pictureBoxComponent.Parent.GetChildAtPoint(newPoint);
+                if (IsCollider(control))
+                {
+                    int maxMovement;
+                    if (_movement.Y > 0) maxMovement = control.Top - Bottom;
+                    else maxMovement = control.Bottom - Top;
+                    _movement.Y = maxMovement;
+                    return;
+                }
             }
         }
 
         private bool IsCollider(Control control)
         {
             return control is Panel panel && panel.Tag.Equals("collider");
+        }
+
+        private void SetDirection()
+        {
+            _direction.X = _movement.X switch
+            {
+                > 0 => Directions.Right,
+                < 0 => Directions.Left,
+                _ => Directions.None
+            };
+
+            _direction.Y = _movement.Y switch
+            {
+                > 0 => Directions.Down,
+                < 0 => Directions.Up,
+                _ => Directions.None
+            };
+        }
+
+        private enum Directions
+        {
+            Left,
+            Right,
+            Up,
+            Down,
+            None
+        }
+
+        private struct Size
+        {
+            public Size(int width, int height)
+            {
+                Width = width;
+                Height = height;
+            }
+            public int Width;
+            public int Height;
+        }
+
+        private struct Direction
+        {
+            public Direction(Directions x, Directions y)
+            {
+                X = x;
+                Y = y;
+            }
+            public Directions X;
+            public Directions Y;
         }
     }
 }
