@@ -19,16 +19,7 @@ namespace VeggieSandwich.Scripts
 
         public void Update(object sender, EventArgs e)
         {
-            if (!Enabled) return;
-            var location = Location;
-            location.Y += FallSpeed;
-            Location = location;
-
-            if (location.Y >= Parent.Height)
-            {
-                OnReturnToPool?.Invoke(this);
-                Enabled = false;
-            }
+            
         }
 
         /// <summary>
@@ -44,6 +35,7 @@ namespace VeggieSandwich.Scripts
             Strength = config.Strength;
 
             Name = $"vegetable{id}";
+            BackColor = Color.Transparent;
             Size = new Size(105, 105);
             SizeMode = PictureBoxSizeMode.StretchImage;
             TabStop = true;

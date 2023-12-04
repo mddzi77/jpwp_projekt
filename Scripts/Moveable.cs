@@ -10,8 +10,8 @@ namespace VeggieSandwich.Scripts
 {
     public class Moveable : IGameObject
     {
-        public float SpeedX = 6;
-        public float Drag = 0.75f;
+        public float Speed = 2;
+        public float Drag = 0.79f;
 
         public PictureBox Picture => _pictureBoxComponent;
 
@@ -35,6 +35,8 @@ namespace VeggieSandwich.Scripts
         {
             KeyHandler.OnLeftArrow += LeftMove;
             KeyHandler.OnRightArrow += RightMove;
+            KeyHandler.OnUpArrow += UpMove;
+            KeyHandler.OnDownArrow += DownMove;
             _size = new Size(0, 0);
         }
 
@@ -42,16 +44,13 @@ namespace VeggieSandwich.Scripts
         {
             if (_movement.Equals(Vector2.Zero)) return;
             var location = _pictureBoxComponent.Location;
-            CheckBoundaries(location);
+            CanMove(location);
             location.X += (int)_movement.X;
             location.Y += (int)_movement.Y;
             _pictureBoxComponent.Location = location;
             Slowdown();
         }
 
-        /// <summary>
-        /// Add empty picture box
-        /// </summary>
         public void AddPictureBox()
         {
             _pictureBoxComponent = new PictureBox();
@@ -59,10 +58,6 @@ namespace VeggieSandwich.Scripts
             _size.Height = _pictureBoxComponent.Height;
         }
 
-        /// <summary>
-        /// Add given picture box
-        /// </summary>
-        /// <param name="pictureBox"></param>
         public void AddPictureBox(PictureBox pictureBox)
         {
             _pictureBoxComponent = pictureBox;
@@ -70,36 +65,26 @@ namespace VeggieSandwich.Scripts
             _size.Height = _pictureBoxComponent.Height;
         }
 
-        /// <summary>
-        /// Set how much object can move
-        /// </summary>
-        /// <param name="horizontal"></param>
-        /// <param name="vertical"></param>
-        public void SetBoundaries(int horizontal, int vertical)
-        {
-            _boundaries.X = horizontal;
-            _boundaries.Y = vertical;
-        }
-
-        /// <summary>
-        /// Add left movement
-        /// </summary>
         private void LeftMove()
         {
-            _movement.X -= SpeedX;
+            _movement.X -= Speed;
         }
 
-        /// <summary>
-        /// Add right movement
-        /// </summary>
         private void RightMove()
         {
-            _movement.X += SpeedX;
+            _movement.X += Speed;
         }
 
-        /// <summary>
-        /// Smoothly slow down object
-        /// </summary>
+        private void UpMove()
+        {
+            _movement.Y -= Speed;
+        }
+
+        private void DownMove()
+        {
+            _movement.Y += Speed;
+        }
+
         private void Slowdown()
         {
             _movement.X *= Drag;
@@ -108,17 +93,45 @@ namespace VeggieSandwich.Scripts
             if (MathF.Abs(_movement.Y) < 1) _movement.Y = 0;
         }
 
-        /// <summary>
-        /// Check if object can move further, if reset movement vector
-        /// </summary>
-        /// <param name="location">Current location</param>
-        private void CheckBoundaries(Point location)
+        private void CanMove(Point location)
         {
-            var left = location.X + _movement.X;
-            var right = location.X + _movement.X + _size.Width;
+            var left = location.X + (int)_movement.X;
+            var right = location.X + (int)_movement.X + _size.Width;
+            var top = location.Y + (int)_movement.Y;
+            var bottom = location.Y + (int)_movement.Y + _size.Height;
 
-            if (left <= 0) _movement.X = 0;
-            if (right >= _boundaries.X) _movement.X = 0;
+            for (int i = left; i <= right; i++)
+            {
+                var positionTop = new Point(i, top);
+                var positionBottom = new Point(i, bottom);
+
+                var control = Picture.Parent.GetChildAtPoint(positionTop);
+                if (IsCollider(control))
+                {
+                    var maxPosition = control.Location.Y + control.Height;
+                    _movement.Y = maxPosition - location.Y;
+                }
+
+                control = Picture.Parent.GetChildAtPoint(positionBottom);
+                if (IsCollider(control))
+                {
+                    var maxPosition = control.Location.Y;
+                    _movement.Y = bottom - maxPosition ;
+                }
+            }
+
+
+
+            for (int i = bottom; i <= top; i++)
+            {
+                var positionLeft = new Point(left, i);
+                var positionRight = new Point(right, i);
+            }
+        }
+
+        private bool IsCollider(Control control)
+        {
+            return control is Panel panel && panel.Tag.Equals("collider");
         }
     }
 }

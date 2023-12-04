@@ -61,7 +61,7 @@ namespace VeggieSandwich.Scripts
             var id = _random.Next(0, _vegetables.Count);
             var vegetable = _vegetables[id];
             _vegetables.Remove(vegetable);
-            vegetable.Initialize();
+            //vegetable.Initialize();
             vegetable.OnReturnToPool += ReturnToPool;
             SetSpawnPosition(vegetable);
             _vegetablesInUse.Add(vegetable);

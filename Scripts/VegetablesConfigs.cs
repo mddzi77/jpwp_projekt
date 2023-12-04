@@ -12,13 +12,13 @@ namespace VeggieSandwich.Scripts
     /// </summary>
     public static class VegetablesConfigs
     {
-        public static List<Boost> Configs = new List<Boost>()
+        public static List<Boost> Configs = new ()
         {
-            new Boost(Resources.corn, BoostType.Memory, 2),
+            /*new Boost(Resources.corn, BoostType.Memory, 2),
             new Boost(Resources.avocado, BoostType.Memory, 5),
             new Boost(Resources.broccoli, BoostType.Eyesight, 3),
             new Boost(Resources.cucumber, BoostType.Muscles, 4),
-            new Boost(Resources.onion, BoostType.Eyesight, 2)
+            new Boost(Resources.onion, BoostType.Eyesight, 2)*/
         };
     }
 
