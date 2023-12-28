@@ -12,8 +12,10 @@ namespace VeggieSandwich.Scripts
     {
         public float Speed = 2;
         public float Drag = 0.79f;
+        public Detector DetectorComponent { get; private set; }
 
         public PictureBox Picture => _pictureBoxComponent;
+        public Point CenterPoint => new(Left + _size.Width / 2, Top + _size.Height / 2);
 
         private Vector2 _movement = Vector2.Zero;
         private PictureBox _pictureBoxComponent;
@@ -32,6 +34,8 @@ namespace VeggieSandwich.Scripts
             KeyHandler.OnUpArrow += UpMove;
             KeyHandler.OnDownArrow += DownMove;
             _size = new Size(0, 0);
+            DetectorComponent = new(this);
+            DetectorComponent.DetectedVegetable += OnDetectedVegetable;
         }
 
         public void Update(object sender, EventArgs e)
@@ -65,21 +69,25 @@ namespace VeggieSandwich.Scripts
         private void LeftMove()
         {
             _movement.X -= Speed;
+            _direction.X = Directions.Left;
         }
 
         private void RightMove()
         {
             _movement.X += Speed;
+            _direction.X = Directions.Right;
         }
 
         private void UpMove()
         {
             _movement.Y -= Speed;
+            _direction.Y = Directions.Up;
         }
 
         private void DownMove()
         {
             _movement.Y += Speed;
+            _direction.Y = Directions.Down;
         }
 
         private void Slowdown()
@@ -156,6 +164,7 @@ namespace VeggieSandwich.Scripts
 
         private bool IsCollider(Control control)
         {
+            if (control == null || control.Tag == null) return false;
             return control is Panel panel && panel.Tag.Equals("collider");
         }
 
@@ -176,7 +185,12 @@ namespace VeggieSandwich.Scripts
             };
         }
 
-        private enum Directions
+        private void OnDetectedVegetable(string name)
+        {
+            Console.WriteLine(name);
+        }
+
+        public enum Directions
         {
             Left,
             Right,

@@ -37,20 +37,21 @@ namespace VeggieSandwich
             //Plate.SetBoundaries(Width, Height);
             Player.AddPictureBox(pictureBox1);
             _gameObjects.Add(Player);
+            _gameObjects.Add(Player.DetectorComponent);
 
             SuspendLayout();
             for (int i = 0; i < _maxVegetablesPool; i++)
             {
-                var vegetable = new Vegetable();
-                vegetable.Enabled = false;
+                //var vegetable = new Vegetable();
+                //vegetable.Enabled = false;
 
-                ((System.ComponentModel.ISupportInitialize)vegetable).BeginInit();
+                //((System.ComponentModel.ISupportInitialize)vegetable).BeginInit();
 
-                Controls.Add(vegetable);
-                _vegetablesPool.Add(vegetable);
-                _gameObjects.Add(vegetable);
+                //Controls.Add(vegetable);
+                //_vegetablesPool.Add(vegetable);
+                //_gameObjects.Add(vegetable);
 
-                ((System.ComponentModel.ISupportInitialize)vegetable).EndInit();
+                //((System.ComponentModel.ISupportInitialize)vegetable).EndInit();
             }
             ResumeLayout(false);
             PerformLayout();
