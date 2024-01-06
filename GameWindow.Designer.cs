@@ -44,7 +44,8 @@ namespace VeggieSandwich
             panel7 = new Panel();
             pictureBox1 = new PictureBox();
             panel8 = new Panel();
-            panel9 = new Panel();
+            Pepper = new Panel();
+            Tomato = new Panel();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -155,13 +156,21 @@ namespace VeggieSandwich
             panel8.TabIndex = 8;
             panel8.Tag = "collider";
             // 
-            // panel9
+            // Pepper
             // 
-            panel9.Location = new Point(96, 392);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(135, 99);
-            panel9.TabIndex = 11;
-            panel9.Tag = "vegetable";
+            Pepper.Location = new Point(180, 570);
+            Pepper.Name = "Pepper";
+            Pepper.Size = new Size(69, 68);
+            Pepper.TabIndex = 11;
+            Pepper.Tag = "vegetable";
+            // 
+            // Tomato
+            // 
+            Tomato.Location = new Point(365, 570);
+            Tomato.Name = "Tomato";
+            Tomato.Size = new Size(69, 68);
+            Tomato.TabIndex = 12;
+            Tomato.Tag = "vegetable";
             // 
             // GameWindow
             // 
@@ -170,8 +179,9 @@ namespace VeggieSandwich
             BackColor = Color.Bisque;
             BackgroundImage = Properties.Resources.kitchen;
             ClientSize = new Size(954, 721);
+            Controls.Add(Tomato);
             Controls.Add(pictureBox1);
-            Controls.Add(panel9);
+            Controls.Add(Pepper);
             Controls.Add(panel8);
             Controls.Add(panel7);
             Controls.Add(panel6);
@@ -205,6 +215,7 @@ namespace VeggieSandwich
         private PictureBox pictureBox1;
         private Panel panel8;
         private PictureBox pictureBox2;
-        private Panel panel9;
+        private Panel Pepper;
+        private Panel Tomato;
     }
 }

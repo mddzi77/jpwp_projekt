@@ -48,4 +48,21 @@ namespace VeggieSandwich.Scripts
         Muscles,
         Eyesight
     }
+
+    public enum VegetableType
+    {
+        Broccoli,
+        Cabbage,
+        Carrot,
+        Celery,
+        Corn,
+        Cucumber,
+        Eggplant,
+        Onion,
+        Radish,
+        Salad,
+        Tomato,
+        Pepper,
+        None
+    }
 }

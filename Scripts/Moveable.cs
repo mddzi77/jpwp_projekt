@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -8,11 +9,10 @@ using VeggieSandwich.Scripts.Core;
 
 namespace VeggieSandwich.Scripts
 {
-    public class Moveable : IGameObject
+    public class Moveable : IGameObject, IMoveable
     {
-        public float Speed = 2;
+        public float Speed = 1.5f;
         public float Drag = 0.79f;
-        public Detector DetectorComponent { get; private set; }
 
         public PictureBox Picture => _pictureBoxComponent;
         public Point CenterPoint => new(Left + _size.Width / 2, Top + _size.Height / 2);
@@ -34,8 +34,6 @@ namespace VeggieSandwich.Scripts
             KeyHandler.OnUpArrow += UpMove;
             KeyHandler.OnDownArrow += DownMove;
             _size = new Size(0, 0);
-            DetectorComponent = new(this);
-            DetectorComponent.DetectedVegetable += OnDetectedVegetable;
         }
 
         public void Update(object sender, EventArgs e)
@@ -64,6 +62,16 @@ namespace VeggieSandwich.Scripts
             _size.Width = _pictureBoxComponent.Width;
             _size.Height = _pictureBoxComponent.Height;
             _location = _pictureBoxComponent.Location;
+        }
+
+        public void OnVegetableTriggerEnter(string vegetableType)
+        {
+            Console.WriteLine(vegetableType);
+        }
+
+        public void OnTriggerEnter(string triggerType)
+        {
+            Console.WriteLine(triggerType);
         }
 
         private void LeftMove()
