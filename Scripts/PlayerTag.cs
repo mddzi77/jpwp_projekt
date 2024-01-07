@@ -13,7 +13,6 @@ namespace VeggieSandwich.Scripts
 
         private Label _label;
         private IMoveable _player;
-        private int yOffset;
 
         public PlayerTag(Label label, IMoveable player)
         {

@@ -10,7 +10,7 @@ namespace VeggieSandwich.Scripts
     public static class GameManager
     {
         public static VegetableType InHand { get; set; } = VegetableType.None;
-        public static String InHandName => PL(InHand);
+        public static string InHandName => PL(InHand);
         public static List<ITrigger> Triggers { get; set; } = new();
         public static List<VegetableType> Order { get; set; } = new();
         public static List<VegetableType> Plate { get; set; } = new();
@@ -20,10 +20,6 @@ namespace VeggieSandwich.Scripts
 
         private static Dictionary<VegetableType, string> _boosts = new()
         {
-         /*{VegetableType.Broccoli, "Brokuł"},
-            {VegetableType.Cabbage, "Kapusta"},
-            {VegetableType.Carrot, "Marchewka"},
-            {VegetableType.Celery, "Seler"},*/   
             {VegetableType.Corn, "Jest dobrym źródłem błonnika dietetycznego oraz jest bogate w przeciwutleniacze."},
             {VegetableType.Cucumber, "Zmniejsza ryzyko nowotworu, reguluje ciśnienie krwi oraz oczyszcza organizm z nadmiaru wody i toksyn."},
             {VegetableType.Eggplant, "Wspomaga prawidłowe funkcjonowanie układu krwionośnego, poprawiając sczelność i elastyczność naczyń."},
@@ -59,6 +55,7 @@ namespace VeggieSandwich.Scripts
 
         public static void StartGame()
         {
+            OrderMsg = "";
             IsGameRunning = true;
             CreateOrder();
         }
@@ -66,6 +63,8 @@ namespace VeggieSandwich.Scripts
         public static void EndGame()
         {
             IsGameRunning = false;
+            OrderMsg = "";
+            _orderNumber++;
 
             OrderMsg += $"Finalizacja zamówienia #{_orderNumber}\n\n";
             List<VegetableType> success = new();
@@ -95,6 +94,15 @@ namespace VeggieSandwich.Scripts
                 OrderMsg += $"- {boost}\n";
             }
 
+
+            foreach (var trigger in Triggers)
+            {
+                trigger.SetActive(true);
+            }
+
+            Plate.Clear();
+            Order.Clear();
+
             Score += success.Count;
         }
 
@@ -108,7 +116,9 @@ namespace VeggieSandwich.Scripts
         public static void Restart()
         {
             InHand = VegetableType.None;
+            Score = 0;
             Order.Clear();
+            Plate.Clear();
             _orderNumber = 1;
             foreach (var trigger in Triggers)
             {
@@ -141,10 +151,6 @@ namespace VeggieSandwich.Scripts
 
     public enum VegetableType
     {
-        /*Broccoli,
-        Cabbage,
-        Carrot,
-        Celery,*/
         Corn,
         Cucumber,
         Eggplant,

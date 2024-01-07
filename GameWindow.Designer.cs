@@ -34,9 +34,17 @@ namespace VeggieSandwich
             components = new System.ComponentModel.Container();
             GameUpdate = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
+            pictureBox5 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            saladImg = new PictureBox();
+            pepperImg = new PictureBox();
             panel2 = new Panel();
+            pictureBox7 = new PictureBox();
             panel3 = new Panel();
             panel4 = new Panel();
+            pictureBox8 = new PictureBox();
+            pictureBox6 = new PictureBox();
             panel5 = new Panel();
             pictureBox2 = new PictureBox();
             panel6 = new Panel();
@@ -64,10 +72,21 @@ namespace VeggieSandwich
             closeOrderBtn = new Button();
             orderPanel = new Panel();
             orderFinBtn = new Button();
-            orderText = new RichTextBox();
             panel11 = new Panel();
             label3 = new Label();
+            orderText = new RichTextBox();
             scoreLabel = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)saladImg).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pepperImg).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -86,20 +105,87 @@ namespace VeggieSandwich
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(pictureBox5);
+            panel1.Controls.Add(pictureBox4);
+            panel1.Controls.Add(pictureBox3);
+            panel1.Controls.Add(saladImg);
+            panel1.Controls.Add(pepperImg);
             panel1.Location = new Point(144, 516);
             panel1.Name = "panel1";
             panel1.Size = new Size(384, 48);
             panel1.TabIndex = 3;
             panel1.Tag = "collider";
             // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.eggplant;
+            pictureBox5.Location = new Point(340, 6);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(41, 39);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 23;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.cucumber;
+            pictureBox4.Location = new Point(293, 5);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(38, 40);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 22;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.tomato;
+            pictureBox3.Location = new Point(243, 0);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(44, 40);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 21;
+            pictureBox3.TabStop = false;
+            // 
+            // saladImg
+            // 
+            saladImg.Image = Properties.Resources.salat;
+            saladImg.Location = new Point(190, 0);
+            saladImg.Name = "saladImg";
+            saladImg.Size = new Size(47, 45);
+            saladImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            saladImg.TabIndex = 1;
+            saladImg.TabStop = false;
+            // 
+            // pepperImg
+            // 
+            pepperImg.BackColor = Color.Transparent;
+            pepperImg.Image = Properties.Resources.yellow_pepper;
+            pepperImg.Location = new Point(48, 0);
+            pepperImg.Name = "pepperImg";
+            pepperImg.Size = new Size(50, 40);
+            pepperImg.SizeMode = PictureBoxSizeMode.StretchImage;
+            pepperImg.TabIndex = 0;
+            pepperImg.TabStop = false;
+            // 
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(pictureBox6);
             panel2.Location = new Point(749, 528);
             panel2.Name = "panel2";
             panel2.Size = new Size(165, 100);
             panel2.TabIndex = 4;
             panel2.Tag = "collider";
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.onion;
+            pictureBox7.Location = new Point(26, 0);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(47, 38);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox7.TabIndex = 25;
+            pictureBox7.TabStop = false;
             // 
             // panel3
             // 
@@ -113,11 +199,33 @@ namespace VeggieSandwich
             // panel4
             // 
             panel4.BackColor = Color.Transparent;
+            panel4.Controls.Add(pictureBox7);
+            panel4.Controls.Add(pictureBox8);
             panel4.Location = new Point(610, 417);
             panel4.Name = "panel4";
             panel4.Size = new Size(143, 53);
             panel4.TabIndex = 6;
             panel4.Tag = "collider";
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.corn;
+            pictureBox8.Location = new Point(101, -12);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(42, 37);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 26;
+            pictureBox8.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.radish2;
+            pictureBox6.Location = new Point(22, 37);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(50, 40);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 24;
+            pictureBox6.TabStop = false;
             // 
             // panel5
             // 
@@ -179,7 +287,7 @@ namespace VeggieSandwich
             // 
             // Pepper
             // 
-            Pepper.BackColor = Color.Yellow;
+            Pepper.BackColor = Color.Transparent;
             Pepper.Location = new Point(192, 462);
             Pepper.Name = "Pepper";
             Pepper.Size = new Size(53, 166);
@@ -188,7 +296,7 @@ namespace VeggieSandwich
             // 
             // Tomato
             // 
-            Tomato.BackColor = Color.OrangeRed;
+            Tomato.BackColor = Color.Transparent;
             Tomato.Location = new Point(384, 462);
             Tomato.Name = "Tomato";
             Tomato.Size = new Size(50, 166);
@@ -209,7 +317,7 @@ namespace VeggieSandwich
             // 
             // Salad
             // 
-            Salad.BackColor = Color.LawnGreen;
+            Salad.BackColor = Color.Transparent;
             Salad.Location = new Point(331, 462);
             Salad.Name = "Salad";
             Salad.Size = new Size(50, 166);
@@ -218,7 +326,7 @@ namespace VeggieSandwich
             // 
             // Cucumber
             // 
-            Cucumber.BackColor = Color.LightGreen;
+            Cucumber.BackColor = Color.Transparent;
             Cucumber.Location = new Point(440, 462);
             Cucumber.Name = "Cucumber";
             Cucumber.Size = new Size(50, 166);
@@ -227,7 +335,7 @@ namespace VeggieSandwich
             // 
             // Eggplant
             // 
-            Eggplant.BackColor = Color.BlueViolet;
+            Eggplant.BackColor = Color.Transparent;
             Eggplant.Location = new Point(496, 462);
             Eggplant.Name = "Eggplant";
             Eggplant.Size = new Size(71, 166);
@@ -236,7 +344,7 @@ namespace VeggieSandwich
             // 
             // Onion
             // 
-            Onion.BackColor = Color.Crimson;
+            Onion.BackColor = Color.Transparent;
             Onion.Location = new Point(633, 355);
             Onion.Name = "Onion";
             Onion.Size = new Size(50, 180);
@@ -245,7 +353,7 @@ namespace VeggieSandwich
             // 
             // Corn
             // 
-            Corn.BackColor = Color.LightYellow;
+            Corn.BackColor = Color.Transparent;
             Corn.Location = new Point(700, 355);
             Corn.Name = "Corn";
             Corn.Size = new Size(50, 180);
@@ -254,7 +362,7 @@ namespace VeggieSandwich
             // 
             // Radish
             // 
-            Radish.BackColor = Color.Salmon;
+            Radish.BackColor = Color.Transparent;
             Radish.Location = new Point(700, 531);
             Radish.Name = "Radish";
             Radish.Size = new Size(65, 108);
@@ -433,10 +541,10 @@ namespace VeggieSandwich
             orderPanel.BackgroundImageLayout = ImageLayout.Stretch;
             orderPanel.CausesValidation = false;
             orderPanel.Controls.Add(orderFinBtn);
-            orderPanel.Controls.Add(orderText);
             orderPanel.Controls.Add(closeOrderBtn);
             orderPanel.Controls.Add(panel11);
-            orderPanel.Location = new Point(166, 42);
+            orderPanel.Controls.Add(orderText);
+            orderPanel.Location = new Point(194, 26);
             orderPanel.Name = "orderPanel";
             orderPanel.Size = new Size(566, 613);
             orderPanel.TabIndex = 22;
@@ -462,23 +570,6 @@ namespace VeggieSandwich
             orderFinBtn.UseVisualStyleBackColor = false;
             orderFinBtn.Click += orderFinBtn_Click;
             // 
-            // orderText
-            // 
-            orderText.BackColor = Color.BurlyWood;
-            orderText.BorderStyle = BorderStyle.None;
-            orderText.CausesValidation = false;
-            orderText.DetectUrls = false;
-            orderText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            orderText.ForeColor = SystemColors.ControlLightLight;
-            orderText.Location = new Point(61, 116);
-            orderText.Name = "orderText";
-            orderText.ReadOnly = true;
-            orderText.ScrollBars = RichTextBoxScrollBars.None;
-            orderText.Size = new Size(445, 400);
-            orderText.TabIndex = 2;
-            orderText.TabStop = false;
-            orderText.Text = "Test test sadddddddddddddddddddddddddddddddddddddddddddddddddddddddd ąćę";
-            // 
             // panel11
             // 
             panel11.BackgroundImage = Properties.Resources.BlueTitle;
@@ -501,6 +592,23 @@ namespace VeggieSandwich
             label3.TabIndex = 0;
             label3.Text = "zamówienie";
             // 
+            // orderText
+            // 
+            orderText.BackColor = Color.BurlyWood;
+            orderText.BorderStyle = BorderStyle.None;
+            orderText.CausesValidation = false;
+            orderText.DetectUrls = false;
+            orderText.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            orderText.ForeColor = SystemColors.ControlLightLight;
+            orderText.Location = new Point(61, 116);
+            orderText.Name = "orderText";
+            orderText.ReadOnly = true;
+            orderText.ScrollBars = RichTextBoxScrollBars.None;
+            orderText.Size = new Size(445, 400);
+            orderText.TabIndex = 2;
+            orderText.TabStop = false;
+            orderText.Text = "Test test sadddddddddddddddddddddddddddddddddddddddddddddddddddddddd ąćę";
+            // 
             // scoreLabel
             // 
             scoreLabel.AutoSize = true;
@@ -521,13 +629,13 @@ namespace VeggieSandwich
             BackgroundImage = Properties.Resources.kitchen;
             ClientSize = new Size(954, 721);
             ControlBox = false;
-            Controls.Add(scoreLabel);
-            Controls.Add(orderPanel);
             Controls.Add(menuPanel);
-            Controls.Add(menuBtn);
-            Controls.Add(orderBtn);
+            Controls.Add(orderPanel);
             Controls.Add(pictureBox1);
             Controls.Add(playerTagLabel);
+            Controls.Add(scoreLabel);
+            Controls.Add(menuBtn);
+            Controls.Add(orderBtn);
             Controls.Add(panel5);
             Controls.Add(panel1);
             Controls.Add(panel2);
@@ -536,20 +644,31 @@ namespace VeggieSandwich
             Controls.Add(panel8);
             Controls.Add(panel7);
             Controls.Add(panel6);
-            Controls.Add(Corn);
-            Controls.Add(Onion);
-            Controls.Add(Eggplant);
-            Controls.Add(Radish);
-            Controls.Add(Cucumber);
-            Controls.Add(Tomato);
-            Controls.Add(Salad);
-            Controls.Add(Pepper);
             Controls.Add(cupboardBox);
+            Controls.Add(Pepper);
+            Controls.Add(Salad);
+            Controls.Add(Tomato);
+            Controls.Add(Cucumber);
+            Controls.Add(Eggplant);
+            Controls.Add(Onion);
+            Controls.Add(Corn);
+            Controls.Add(Radish);
             KeyPreview = true;
             MaximizeBox = false;
             Name = "GameWindow";
             Text = "VeggieSandwich";
             Load += GameWindow_Load;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)saladImg).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pepperImg).EndInit();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -603,5 +722,13 @@ namespace VeggieSandwich
         private RichTextBox orderText;
         private Button orderFinBtn;
         private Label scoreLabel;
+        private PictureBox pepperImg;
+        private PictureBox saladImg;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox6;
     }
 }

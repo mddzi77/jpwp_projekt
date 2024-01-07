@@ -96,6 +96,7 @@ namespace VeggieSandwich
 
         private void closeOrderBtn_Click(object sender, EventArgs e)
         {
+            orderText.Clear();
             orderPanel.Visible = false;
             orderPanel.Enabled = false;
             menuBtn.Enabled = true;
@@ -121,6 +122,7 @@ namespace VeggieSandwich
             menuPanel.Enabled = false;
             menuBtn.Enabled = true;
             orderBtn.Enabled = true;
+            scoreLabel.Text = $"Wynik: {GameManager.Score}";
             Focus();
             SubscribeToGameUpdate();
         }
@@ -149,6 +151,7 @@ namespace VeggieSandwich
             }
             orderText.Clear();
             GameManager.StartGame();
+            orderText.Text = GameManager.OrderMsg;
             closeOrderBtn.Enabled = true;
             orderFinBtn.Text = "Finalizuj zamówienie";
             scoreLabel.Text = $"Wynik: {GameManager.Score}";

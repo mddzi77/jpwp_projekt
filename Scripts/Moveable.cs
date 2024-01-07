@@ -51,7 +51,6 @@ namespace VeggieSandwich.Scripts
             _location.Y += (int)_movement.Y;
             _pictureBoxComponent.Location = _location;
             Slowdown();
-            Console.WriteLine(_location.ToString());
         }
 
         public void AddPictureBox()
@@ -101,12 +100,13 @@ namespace VeggieSandwich.Scripts
                 if (GameManager.InHand == VegetableType.None)
                 {
                     GameManager.InHand = vegetable.Type;
+                    Console.WriteLine($"In hand: {GameManager.InHandName}");
                     MainLabel.SetText("");
                     _vegeteableTrigger = vegetable;
                 }
                 else if (GameManager.InHand == vegetable.Type)
                 {
-                    GameManager.AddToPlate();
+                    GameManager.InHand = VegetableType.None;
                 }
                 else
                 {
@@ -119,6 +119,7 @@ namespace VeggieSandwich.Scripts
                 var cupboard = (CupboardTrigger)_currentTrigger;
                 _vegeteableTrigger.SetActive(false);
                 MainLabel.SetText("");
+                GameManager.AddToPlate();
                 GameManager.InHand = VegetableType.None;
             }
         }
