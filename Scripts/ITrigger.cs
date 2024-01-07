@@ -10,6 +10,8 @@ namespace VeggieSandwich.Scripts
     {
         string Name { get; }
         bool IsTriggered { get; }
-        public event Action<ITrigger> TriggerEnter;
+        bool IsActive { get; }
+        event Action<ITrigger> TriggerEnter;
+        void SetActive(bool isActive);
     }
 }

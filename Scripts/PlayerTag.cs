@@ -9,6 +9,8 @@ namespace VeggieSandwich.Scripts
 {
     public class PlayerTag : IGameObject
     {
+        public string Text => _label.Text;
+
         private Label _label;
         private IMoveable _player;
         private int yOffset;

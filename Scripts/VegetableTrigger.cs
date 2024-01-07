@@ -11,12 +11,15 @@ namespace VeggieSandwich.Scripts
     {
         public string Name => _type.ToString();
         public bool IsTriggered { get; private set; }
+        public bool IsActive => _isActive;
+        public VegetableType Type => _type;
 
         public event Action<ITrigger> TriggerEnter;
 
         private VegetableType _type;
         private IMoveable _player;
         private Panel _panel;
+        private bool _isActive = true;
 
         public VegetableTrigger(IMoveable player, Panel panel)
         {
@@ -28,7 +31,13 @@ namespace VeggieSandwich.Scripts
 
         public void Update(object sender, EventArgs e)
         {
+            if (!_isActive) return;
             CheckTriggerEnter();
+        }
+
+        public void SetActive(bool isActive)
+        {
+            _isActive = isActive;
         }
 
         private void CheckTriggerEnter()

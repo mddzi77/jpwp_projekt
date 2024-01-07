@@ -13,6 +13,7 @@ namespace VeggieSandwich.Scripts.Core
         public static event Action OnRightArrow;
         public static event Action OnUpArrow;
         public static event Action OnDownArrow;
+        public static event Action PressedE;
 
         private static bool _leftArrow = false;
         private static bool _rightArrow = false;
@@ -52,6 +53,9 @@ namespace VeggieSandwich.Scripts.Core
                     break;
                 case Keys.Down:
                     _downArrow = true;
+                    break;
+                case Keys.E:
+                    PressedE?.Invoke();
                     break;
                 default: return;
             }

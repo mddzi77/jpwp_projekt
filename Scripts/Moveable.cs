@@ -28,6 +28,7 @@ namespace VeggieSandwich.Scripts
         private Point _location;
         private Direction _direction = new(Directions.None, Directions.None);
         private ITrigger _currentTrigger;
+        private VegetableType _currentVegetable = VegetableType.None;
 
         public Moveable()
         {
@@ -35,16 +36,13 @@ namespace VeggieSandwich.Scripts
             KeyHandler.OnRightArrow += RightMove;
             KeyHandler.OnUpArrow += UpMove;
             KeyHandler.OnDownArrow += DownMove;
+            KeyHandler.PressedE += OnPressedE;
             _size = new Size(0, 0);
         }
 
         public void Update(object sender, EventArgs e)
         {
-            if (_currentTrigger != null && !_currentTrigger.IsTriggered)
-            {
-                _currentTrigger = null;
-                MainLabel.SetText("");
-            }
+            CheckTrigger();
             if (_movement.Equals(Vector2.Zero)) return;
             SetDirection();
             CanMove();
@@ -73,14 +71,29 @@ namespace VeggieSandwich.Scripts
 
         public void OnVegetableTriggerEnter(ITrigger trigger)
         {
+            if (_currentVegetable != VegetableType.None) return;
             _currentTrigger = trigger;
-            MainLabel.SetText(trigger.Name);
+            var message = $"[E]: Podnieś {trigger.Name}";
+            MainLabel.SetText(message);
         }
 
         public void OnTriggerEnter(ITrigger trigger)
         {
             _currentTrigger = trigger;
             MainLabel.SetText(trigger.Name);
+        }
+
+        private void OnPressedE()
+        {
+            if (_currentTrigger == null | !_currentTrigger.IsTriggered || _currentVegetable != VegetableType.None) return;
+
+            if (_currentTrigger is VegetableTrigger)
+            {
+                var vegetable = (VegetableTrigger)_currentTrigger;
+                _currentVegetable = vegetable.Type;
+                _currentTrigger.SetActive(false);
+                MainLabel.SetText($"Trzymasz {_currentVegetable}");
+            }
         }
 
         private void LeftMove()
@@ -200,6 +213,20 @@ namespace VeggieSandwich.Scripts
                 < 0 => Directions.Up,
                 _ => Directions.None
             };
+        }
+
+        private void CheckTrigger()
+        {
+            if (MainLabel.Text.Equals("")) return;
+            if (_currentTrigger == null)
+            {
+                _currentTrigger = null;
+                MainLabel.SetText("");
+                return;
+            }
+            if (_currentTrigger.IsTriggered || _currentVegetable != VegetableType.None) return;
+            _currentTrigger = null;
+            MainLabel.SetText("");
         }
 
         public enum Directions

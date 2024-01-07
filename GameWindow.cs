@@ -7,6 +7,7 @@ namespace VeggieSandwich
     public partial class GameWindow : Form
     {
         public Moveable Player = new();
+        public CupboardTrigger Cupboard;
 
         private List<IGameObject> _gameObjects = new();
 
@@ -26,6 +27,7 @@ namespace VeggieSandwich
 
             Player.AddPictureBox(pictureBox1);
             _gameObjects.Add(Player);
+
             var vegetables = GetPanelsByTag(this, "vegetable");
             foreach (var veg in vegetables)
             {
@@ -36,6 +38,9 @@ namespace VeggieSandwich
             var playerTag = new PlayerTag(playerTagLabel, Player);
             _gameObjects.Add(playerTag);
             Player.MainLabel = playerTag;
+
+            Cupboard = new CupboardTrigger(Player, cupboardBox);
+            _gameObjects.Add(Cupboard);
         }
 
         private void SubscribeToGameUpdate()
@@ -66,6 +71,5 @@ namespace VeggieSandwich
                 .ToList();
             return list;
         }
-
     }
 }

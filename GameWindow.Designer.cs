@@ -46,13 +46,15 @@ namespace VeggieSandwich
             Pepper = new Panel();
             Tomato = new Panel();
             playerTagLabel = new Label();
-            Salat = new Panel();
+            Salad = new Panel();
             Cucumber = new Panel();
             Eggplant = new Panel();
             Onion = new Panel();
             Corn = new Panel();
             Radish = new Panel();
+            cupboardBox = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)cupboardBox).BeginInit();
             SuspendLayout();
             // 
             // GameUpdate
@@ -135,7 +137,7 @@ namespace VeggieSandwich
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.DarkOrange;
-            pictureBox1.Location = new Point(488, 408);
+            pictureBox1.Location = new Point(509, 369);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(58, 62);
             pictureBox1.TabIndex = 10;
@@ -153,18 +155,18 @@ namespace VeggieSandwich
             // Pepper
             // 
             Pepper.BackColor = Color.Yellow;
-            Pepper.Location = new Point(192, 475);
+            Pepper.Location = new Point(192, 462);
             Pepper.Name = "Pepper";
-            Pepper.Size = new Size(53, 153);
+            Pepper.Size = new Size(53, 166);
             Pepper.TabIndex = 11;
             Pepper.Tag = "vegetable";
             // 
             // Tomato
             // 
             Tomato.BackColor = Color.OrangeRed;
-            Tomato.Location = new Point(384, 475);
+            Tomato.Location = new Point(384, 462);
             Tomato.Name = "Tomato";
-            Tomato.Size = new Size(50, 153);
+            Tomato.Size = new Size(50, 166);
             Tomato.TabIndex = 12;
             Tomato.Tag = "vegetable";
             // 
@@ -174,54 +176,54 @@ namespace VeggieSandwich
             playerTagLabel.BackColor = Color.Transparent;
             playerTagLabel.Font = new Font("Segoe UI", 15F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             playerTagLabel.ForeColor = Color.White;
-            playerTagLabel.Location = new Point(488, 377);
+            playerTagLabel.Location = new Point(509, 338);
             playerTagLabel.Name = "playerTagLabel";
             playerTagLabel.Size = new Size(70, 28);
             playerTagLabel.TabIndex = 13;
             playerTagLabel.Text = "label2";
             // 
-            // Salat
+            // Salad
             // 
-            Salat.BackColor = Color.LawnGreen;
-            Salat.Location = new Point(331, 475);
-            Salat.Name = "Salat";
-            Salat.Size = new Size(50, 153);
-            Salat.TabIndex = 13;
-            Salat.Tag = "vegetable";
+            Salad.BackColor = Color.LawnGreen;
+            Salad.Location = new Point(331, 462);
+            Salad.Name = "Salad";
+            Salad.Size = new Size(50, 166);
+            Salad.TabIndex = 13;
+            Salad.Tag = "vegetable";
             // 
             // Cucumber
             // 
             Cucumber.BackColor = Color.LightGreen;
-            Cucumber.Location = new Point(440, 475);
+            Cucumber.Location = new Point(440, 462);
             Cucumber.Name = "Cucumber";
-            Cucumber.Size = new Size(50, 153);
+            Cucumber.Size = new Size(50, 166);
             Cucumber.TabIndex = 13;
             Cucumber.Tag = "vegetable";
             // 
             // Eggplant
             // 
             Eggplant.BackColor = Color.BlueViolet;
-            Eggplant.Location = new Point(496, 475);
+            Eggplant.Location = new Point(496, 462);
             Eggplant.Name = "Eggplant";
-            Eggplant.Size = new Size(71, 153);
+            Eggplant.Size = new Size(71, 166);
             Eggplant.TabIndex = 14;
             Eggplant.Tag = "vegetable";
             // 
             // Onion
             // 
             Onion.BackColor = Color.Crimson;
-            Onion.Location = new Point(633, 368);
+            Onion.Location = new Point(633, 355);
             Onion.Name = "Onion";
-            Onion.Size = new Size(50, 153);
+            Onion.Size = new Size(50, 180);
             Onion.TabIndex = 14;
             Onion.Tag = "vegetable";
             // 
             // Corn
             // 
             Corn.BackColor = Color.LightYellow;
-            Corn.Location = new Point(700, 369);
+            Corn.Location = new Point(700, 355);
             Corn.Name = "Corn";
-            Corn.Size = new Size(50, 153);
+            Corn.Size = new Size(50, 180);
             Corn.TabIndex = 15;
             Corn.Tag = "vegetable";
             // 
@@ -230,9 +232,20 @@ namespace VeggieSandwich
             Radish.BackColor = Color.Salmon;
             Radish.Location = new Point(700, 531);
             Radish.Name = "Radish";
-            Radish.Size = new Size(65, 97);
+            Radish.Size = new Size(65, 108);
             Radish.TabIndex = 16;
             Radish.Tag = "vegetable";
+            // 
+            // cupboardBox
+            // 
+            cupboardBox.BackColor = Color.Transparent;
+            cupboardBox.Image = Properties.Resources.box;
+            cupboardBox.Location = new Point(132, 355);
+            cupboardBox.Name = "cupboardBox";
+            cupboardBox.Size = new Size(124, 87);
+            cupboardBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            cupboardBox.TabIndex = 17;
+            cupboardBox.TabStop = false;
             // 
             // GameWindow
             // 
@@ -258,12 +271,14 @@ namespace VeggieSandwich
             Controls.Add(Radish);
             Controls.Add(Cucumber);
             Controls.Add(Tomato);
-            Controls.Add(Salat);
+            Controls.Add(Salad);
             Controls.Add(Pepper);
+            Controls.Add(cupboardBox);
             Name = "GameWindow";
             Text = "VeggieSandwich";
             Load += GameWindow_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)cupboardBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -284,11 +299,12 @@ namespace VeggieSandwich
         private Panel Pepper;
         private Panel Tomato;
         private Label playerTagLabel;
-        private Panel Salat;
+        private Panel Salad;
         private Panel Cucumber;
         private Panel Eggplant;
         private Panel Onion;
         private Panel Corn;
         private Panel Radish;
+        private PictureBox cupboardBox;
     }
 }
