@@ -41,6 +41,9 @@ namespace VeggieSandwich
 
             Cupboard = new CupboardTrigger(Player, cupboardBox);
             _gameObjects.Add(Cupboard);
+
+            var colliders = GetPanelsByTag(this, "collider");
+            Player.Colliders = colliders;
         }
 
         private void SubscribeToGameUpdate()

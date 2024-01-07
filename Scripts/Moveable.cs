@@ -21,6 +21,7 @@ namespace VeggieSandwich.Scripts
         public int Top => _pictureBoxComponent.Top;
         public int Bottom => _pictureBoxComponent.Bottom;
         public PlayerTag MainLabel { get; set; }
+        public List<Panel> Colliders { get; set; }
 
         private Vector2 _movement = Vector2.Zero;
         private PictureBox _pictureBoxComponent;
@@ -128,10 +129,42 @@ namespace VeggieSandwich.Scripts
             if (MathF.Abs(_movement.Y) < 1) _movement.Y = 0;
         }
 
-        private void CanMove()
+        private async void CanMove()
         {
-            CheckHorizontally();
-            CheckVertically();
+            await CheckColliders();
+        }
+
+        private async Task CheckColliders()
+        {
+            Vector4 edges = new(Left + (int)_movement.X, // X
+                Right + (int)_movement.X, // Y
+                Top + (int)_movement.Y, // Z
+                Bottom + (int)_movement.Y); // W
+
+            List<Task> tasks = new List<Task>();
+            foreach (var collider in Colliders)
+            {
+                if (collider.Left > edges.Y && collider.Right < edges.X && collider.Top > edges.W && collider.Bottom < edges.Z) continue;
+                tasks.Add(IsInCollider(edges, collider));
+            }
+            await Task.WhenAll(tasks);
+        }
+
+        private async Task IsInCollider(Vector4 edges, Panel collider)
+        {
+            for (int i = (int)edges.Z; i < edges.W; i++)
+            {
+                for (int j = (int)edges.X; j < edges.Y; j++)
+                {
+                    var newPoint = new Point(j, i);
+                    if (newPoint.X > collider.Left && newPoint.X < collider.Right
+                        && newPoint.Y > collider.Top && newPoint.Y < collider.Bottom)
+                    {
+                        _movement = Vector2.Zero;
+                        return;
+                    }
+                }
+            }
         }
 
         private void CheckHorizontally()
