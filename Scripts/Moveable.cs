@@ -29,7 +29,7 @@ namespace VeggieSandwich.Scripts
         private Point _location;
         private Direction _direction = new(Directions.None, Directions.None);
         private ITrigger _currentTrigger;
-        private VegetableType _currentVegetable = VegetableType.None;
+        private VegetableTrigger _vegeteableTrigger;
 
         public Moveable()
         {
@@ -72,28 +72,54 @@ namespace VeggieSandwich.Scripts
 
         public void OnVegetableTriggerEnter(ITrigger trigger)
         {
-            if (_currentVegetable != VegetableType.None) return;
+            var vegTrigger = (VegetableTrigger)trigger;
             _currentTrigger = trigger;
-            var message = $"[E]: Podnieś {trigger.Name}";
-            MainLabel.SetText(message);
+            if (GameManager.InHand == VegetableType.None)
+            {
+                MainLabel.SetText($"[E]: Podnieś {vegTrigger.Name}");
+            }
+            else if (GameManager.InHand == vegTrigger.Type)
+            {
+                MainLabel.SetText($"[E]: Odłóż z powrotem {vegTrigger.Name}");
+            }
         }
 
         public void OnTriggerEnter(ITrigger trigger)
         {
             _currentTrigger = trigger;
-            MainLabel.SetText(trigger.Name);
+            if (GameManager.InHand == VegetableType.None) return;
+            MainLabel.SetText($"[E]: Odłóż {GameManager.InHandName} do zamówienia");
         }
 
         private void OnPressedE()
         {
-            if (_currentTrigger == null | !_currentTrigger.IsTriggered || _currentVegetable != VegetableType.None) return;
+            if (_currentTrigger == null | !_currentTrigger.IsTriggered) return;
 
             if (_currentTrigger is VegetableTrigger)
             {
                 var vegetable = (VegetableTrigger)_currentTrigger;
-                _currentVegetable = vegetable.Type;
-                _currentTrigger.SetActive(false);
-                MainLabel.SetText($"Trzymasz {_currentVegetable}");
+                if (GameManager.InHand == VegetableType.None)
+                {
+                    GameManager.InHand = vegetable.Type;
+                    MainLabel.SetText("");
+                    _vegeteableTrigger = vegetable;
+                }
+                else if (GameManager.InHand == vegetable.Type)
+                {
+                    GameManager.AddToPlate();
+                }
+                else
+                {
+                    MainLabel.SetText($"Nie możesz trzymać {GameManager.InHandName} i {vegetable.Type} jednocześnie");
+                }
+            }
+            else if (_currentTrigger is CupboardTrigger)
+            {
+                if (GameManager.InHand == VegetableType.None) return;
+                var cupboard = (CupboardTrigger)_currentTrigger;
+                _vegeteableTrigger.SetActive(false);
+                MainLabel.SetText("");
+                GameManager.InHand = VegetableType.None;
             }
         }
 
@@ -182,6 +208,19 @@ namespace VeggieSandwich.Scripts
                 < 0 => Directions.Up,
                 _ => Directions.None
             };
+            Animate();
+        }
+
+        private void Animate()
+        {
+            if (_direction.X == Directions.Left)
+            {
+                _pictureBoxComponent.Image = Properties.Resources.char_left;
+            }
+            else if (_direction.X == Directions.Right)
+            {
+                _pictureBoxComponent.Image = Properties.Resources.char_right;
+            }
         }
 
         private void CheckTrigger()
@@ -189,12 +228,10 @@ namespace VeggieSandwich.Scripts
             if (MainLabel.Text.Equals("")) return;
             if (_currentTrigger == null)
             {
-                _currentTrigger = null;
                 MainLabel.SetText("");
                 return;
             }
-            if (_currentTrigger.IsTriggered || _currentVegetable != VegetableType.None) return;
-            _currentTrigger = null;
+            if (_currentTrigger.IsTriggered) return;
             MainLabel.SetText("");
         }
 

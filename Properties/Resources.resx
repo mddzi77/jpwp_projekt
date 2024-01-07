@@ -133,6 +133,12 @@
   <data name="celery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Veggies\celery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="char_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\char_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="char_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\char_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="corn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Veggies\corn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

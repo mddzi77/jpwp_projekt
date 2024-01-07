@@ -32,6 +32,7 @@ namespace VeggieSandwich
             foreach (var veg in vegetables)
             {
                 var trigger = new VegetableTrigger(Player, veg);
+                GameManager.Triggers.Add(trigger);
                 _gameObjects.Add(trigger);
             }
 
@@ -41,6 +42,7 @@ namespace VeggieSandwich
 
             Cupboard = new CupboardTrigger(Player, cupboardBox);
             _gameObjects.Add(Cupboard);
+            GameManager.Triggers.Add(Cupboard);
 
             var colliders = GetPanelsByTag(this, "collider");
             Player.Colliders = colliders;

@@ -9,7 +9,7 @@ namespace VeggieSandwich.Scripts
 {
     public class VegetableTrigger : IGameObject, ITrigger
     {
-        public string Name => _type.ToString();
+        public string Name => GameManager.PL(_type);
         public bool IsTriggered { get; private set; }
         public bool IsActive => _isActive;
         public VegetableType Type => _type;

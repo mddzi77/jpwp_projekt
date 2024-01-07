@@ -136,10 +136,12 @@ namespace VeggieSandwich
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.DarkOrange;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.char_left;
             pictureBox1.Location = new Point(509, 369);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(58, 62);
+            pictureBox1.Size = new Size(45, 60);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
