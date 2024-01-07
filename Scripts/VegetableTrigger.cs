@@ -57,10 +57,10 @@ namespace VeggieSandwich.Scripts
         {
             _type = _panel.Name switch
             {
-                "Broccoli" => VegetableType.Broccoli,
+                /*"Broccoli" => VegetableType.Broccoli,
                 "Cabbage" => VegetableType.Cabbage,
                 "Carrot" => VegetableType.Carrot,
-                "Celery" => VegetableType.Celery,
+                "Celery" => VegetableType.Celery,*/
                 "Corn" => VegetableType.Corn,
                 "Cucumber" => VegetableType.Cucumber,
                 "Eggplant" => VegetableType.Eggplant,

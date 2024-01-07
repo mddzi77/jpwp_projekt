@@ -118,6 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BlueButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\BlueButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlueButtonPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\BlueButtonPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlueTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\BlueTitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlueTitle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\BlueTitle2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="box" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,17 +151,59 @@
   <data name="char_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\char_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CloseButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\CloseButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CloseButtonPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\CloseButtonPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CoinIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\CoinIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="corn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Veggies\corn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Veggies\cucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DialogueBox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\DialogueBox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DialogueTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\DialogueTitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="eggplant" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Veggies\eggplant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="EmptyScoreBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\EmptyScoreBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EmptyStar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\EmptyStar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FullHealthBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\FullHealthBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\GreenButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenButtonPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\GreenButtonPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeartIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\HeartIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kitchen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\kitchen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\LargeBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MediumGreenButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\MediumGreenButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MediumGreenButtonPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\MediumGreenButtonPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="onion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Veggies\onion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,13 +211,67 @@
   <data name="radish2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Veggies\radish2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RedButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\RedButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedButtonPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\RedButtonPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedTitle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\RedTitle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="salat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Veggies\salat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\SaveMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveSlot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\SaveSlot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveSlotSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\SaveSlotSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveSlotSeletcor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\SaveSlotSeletcor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingsBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\SettingsBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\SmallBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBackground2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\SmallBackground2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StarIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\StarIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Switch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\Switch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SwitchContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\SwitchContainer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TickBox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\TickBox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TickIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\TickIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Veggies\tomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="VolumeBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\VolumeBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VolumeSlider" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\gui\VolumeSlider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="yellow_pepper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Veggies\yellow pepper .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_02_dish_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\02_dish_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

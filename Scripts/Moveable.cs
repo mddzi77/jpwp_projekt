@@ -33,10 +33,10 @@ namespace VeggieSandwich.Scripts
 
         public Moveable()
         {
-            KeyHandler.OnLeftArrow += LeftMove;
-            KeyHandler.OnRightArrow += RightMove;
-            KeyHandler.OnUpArrow += UpMove;
-            KeyHandler.OnDownArrow += DownMove;
+            KeyHandler.PressedLeft += LeftMove;
+            KeyHandler.PressedRight += RightMove;
+            KeyHandler.PressedUp += UpMove;
+            KeyHandler.PressedDown += DownMove;
             KeyHandler.PressedE += OnPressedE;
             _size = new Size(0, 0);
         }

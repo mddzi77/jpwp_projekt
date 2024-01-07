@@ -9,50 +9,41 @@ namespace VeggieSandwich.Scripts.Core
 {
     public static class KeyHandler
     {
-        public static event Action OnLeftArrow;
-        public static event Action OnRightArrow;
-        public static event Action OnUpArrow;
-        public static event Action OnDownArrow;
+        public static event Action PressedLeft;
+        public static event Action PressedRight;
+        public static event Action PressedUp;
+        public static event Action PressedDown;
         public static event Action PressedE;
 
-        private static bool _leftArrow = false;
-        private static bool _rightArrow = false;
-        private static bool _upArrow = false;
-        private static bool _downArrow = false;
+        private static bool _left = false;
+        private static bool _right = false;
+        private static bool _up = false;
+        private static bool _down = false;
 
-        /// <summary>
-        /// Invoke key press events after flag is up
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         public static void InvokeKeys(object sender, EventArgs e)
         {
-            if (_leftArrow) OnLeftArrow?.Invoke();
-            if (_rightArrow) OnRightArrow?.Invoke();
-            if (_upArrow) OnUpArrow?.Invoke();
-            if (_downArrow) OnDownArrow?.Invoke();
+            if (_left) PressedLeft?.Invoke();
+            if (_right) PressedRight?.Invoke();
+            if (_up) PressedUp?.Invoke();
+            if (_down) PressedDown?.Invoke();
         }
 
-        /// <summary>
-        /// Put flag up when key is pressed down
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public static void KeyDown(object sender, KeyEventArgs e)
+        public static void OnKeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
-                case Keys.Left:
-                    _leftArrow = true;
+                case Keys.A:
+                    _left = true;
                     break;
-                case Keys.Right:
-                    _rightArrow = true;
+                case Keys.D:
+                    _right = true;
                     break;
-                case Keys.Up:
-                    _upArrow = true;
+                case Keys.W:
+                    _up = true;
                     break;
-                case Keys.Down:
-                    _downArrow = true;
+                case Keys.S:
+                    _down = true;
                     break;
                 case Keys.E:
                     PressedE?.Invoke();
@@ -61,26 +52,21 @@ namespace VeggieSandwich.Scripts.Core
             }
         }
 
-        /// <summary>
-        /// Put flag down when key is released
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public static void KeyUp(object sender, KeyEventArgs e)
+        public static void OnKeyUp(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
-                case Keys.Left:
-                    _leftArrow = false;
+                case Keys.A:
+                    _left = false;
                     break;
-                case Keys.Right:
-                    _rightArrow = false;
+                case Keys.D:
+                    _right = false;
                     break;
-                case Keys.Up:
-                    _upArrow = false;
+                case Keys.W:
+                    _up = false;
                     break;
-                case Keys.Down:
-                    _downArrow = false;
+                case Keys.S:
+                    _down = false;
                     break;
                 default: return;
             }
