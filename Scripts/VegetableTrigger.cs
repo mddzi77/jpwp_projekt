@@ -9,7 +9,10 @@ namespace VeggieSandwich.Scripts
 {
     public class VegetableTrigger : IGameObject, ITrigger
     {
-        public event Action<string> TriggerEnter;
+        public string Name => _type.ToString();
+        public bool IsTriggered { get; private set; }
+
+        public event Action<ITrigger> TriggerEnter;
 
         private VegetableType _type;
         private IMoveable _player;
@@ -34,8 +37,11 @@ namespace VeggieSandwich.Scripts
             if (location.X > _panel.Left && location.X < _panel.Right
                 && location.Y > _panel.Top && location.Y < _panel.Bottom)
             {
-                TriggerEnter?.Invoke(_type.ToString());
+                TriggerEnter?.Invoke(this);
+                IsTriggered = true;
+                return;
             }
+            IsTriggered = false;
         }
 
         private void SetType()

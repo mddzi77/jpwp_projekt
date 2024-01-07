@@ -16,16 +16,18 @@ namespace VeggieSandwich.Scripts
 
         public PictureBox Picture => _pictureBoxComponent;
         public Point CenterPoint => new(Left + _size.Width / 2, Top + _size.Height / 2);
+        public int Left => _pictureBoxComponent.Left;
+        public int Right => _pictureBoxComponent.Right;
+        public int Top => _pictureBoxComponent.Top;
+        public int Bottom => _pictureBoxComponent.Bottom;
+        public PlayerTag MainLabel { get; set; }
 
         private Vector2 _movement = Vector2.Zero;
         private PictureBox _pictureBoxComponent;
         private Size _size;
         private Point _location;
-        private int Left => _pictureBoxComponent.Left;
-        private int Right => _pictureBoxComponent.Right;
-        private int Top => _pictureBoxComponent.Top;
-        private int Bottom => _pictureBoxComponent.Bottom;
         private Direction _direction = new(Directions.None, Directions.None);
+        private ITrigger _currentTrigger;
 
         public Moveable()
         {
@@ -38,6 +40,11 @@ namespace VeggieSandwich.Scripts
 
         public void Update(object sender, EventArgs e)
         {
+            if (_currentTrigger != null && !_currentTrigger.IsTriggered)
+            {
+                _currentTrigger = null;
+                MainLabel.SetText("");
+            }
             if (_movement.Equals(Vector2.Zero)) return;
             SetDirection();
             CanMove();
@@ -64,14 +71,16 @@ namespace VeggieSandwich.Scripts
             _location = _pictureBoxComponent.Location;
         }
 
-        public void OnVegetableTriggerEnter(string vegetableType)
+        public void OnVegetableTriggerEnter(ITrigger trigger)
         {
-            Console.WriteLine(vegetableType);
+            _currentTrigger = trigger;
+            MainLabel.SetText(trigger.Name);
         }
 
-        public void OnTriggerEnter(string triggerType)
+        public void OnTriggerEnter(ITrigger trigger)
         {
-            Console.WriteLine(triggerType);
+            _currentTrigger = trigger;
+            MainLabel.SetText(trigger.Name);
         }
 
         private void LeftMove()
@@ -191,11 +200,6 @@ namespace VeggieSandwich.Scripts
                 < 0 => Directions.Up,
                 _ => Directions.None
             };
-        }
-
-        private void OnDetectedVegetable(string name)
-        {
-            Console.WriteLine(name);
         }
 
         public enum Directions

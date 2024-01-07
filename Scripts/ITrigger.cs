@@ -8,6 +8,8 @@ namespace VeggieSandwich.Scripts
 {
     public interface ITrigger
     {
-        public event Action<string> TriggerEnter;
+        string Name { get; }
+        bool IsTriggered { get; }
+        public event Action<ITrigger> TriggerEnter;
     }
 }

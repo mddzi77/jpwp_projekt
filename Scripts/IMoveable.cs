@@ -10,7 +10,11 @@ namespace VeggieSandwich.Scripts
     {
         PictureBox Picture { get; }
         Point CenterPoint { get; }
-        void OnVegetableTriggerEnter(string vegetableType);
-        void OnTriggerEnter(string triggerType);
+        int Left { get; }
+        int Right { get; }
+        int Top { get; }
+        int Bottom { get; }
+        void OnVegetableTriggerEnter(ITrigger trigger);
+        void OnTriggerEnter(ITrigger trigger);
     }
 }

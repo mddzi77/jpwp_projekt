@@ -33,9 +33,9 @@ namespace VeggieSandwich
                 _gameObjects.Add(trigger);
             }
 
-            SuspendLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            var playerTag = new PlayerTag(playerTagLabel, Player);
+            _gameObjects.Add(playerTag);
+            Player.MainLabel = playerTag;
         }
 
         private void SubscribeToGameUpdate()
@@ -59,7 +59,7 @@ namespace VeggieSandwich
 
         }
 
-        public List<Panel> GetPanelsByTag(Control parentControl, string tag)
+        private List<Panel> GetPanelsByTag(Control parentControl, string tag)
         {
             var list = parentControl.Controls.OfType<Panel>()
                 .Where(panel => panel.Tag.Equals(tag))
